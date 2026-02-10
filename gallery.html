@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photo Gallery</title>
+
+<style>
+  body {
+    background: linear-gradient(to bottom, #e6f2f4, #cfe6ea, #b0e0e6);
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  /* PROFESSIONAL TASK BAR */
+  nav {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 14px 0;
+  }
+
+  nav .nav-container {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+  }
+
+  nav a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1f2d3d;
+    padding: 6px 2px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+
+  nav a:hover {
+    color: #1f6fa8;
+    border-bottom: 2px solid #1f6fa8;
+  }
+
+  .content {
+    background-color: #ffffff;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 40px 50px;
+    border-radius: 6px;
+    text-align: center;
+  }
+
+  h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    margin-bottom: 40px;
+  }
+
+  .category {
+    display: inline-block;
+    margin: 20px;
+    text-decoration: none;
+    color: #000;
+  }
+
+  .category img {
+    width: 220px;
+    border-radius: 6px;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .category:hover {
+    opacity: 0.85;
+  }
+
+  footer {
+    background-color: #f3efe8;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 14px;
+  }
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="nav-container">
+    <a href="landingpage.html">Home</a>
+    <a href="biography.html">Biography</a>
+    <a href="gallery.html">Photo Gallery</a>
+    <a href="beats.html">My Beats</a>
+    <a href="movies.html">Movies</a>
+    <a href="tvshows.html">TV Shows</a>
+    <a href="places.html">Dream Places</a>
+    <a href="bucketlist.html">Bucket List</a>
+  </div>
+</nav>
+
+<div class="content">
+  <h1>My Photo Gallery</h1>
+
+  <a href="childhood.html" class="category">
+    <img src="pictures ko/childhood.jpg" alt="Childhood">
+    <strong>Childhood</strong>
+  </a>
+
+  <a href="travel.html" class="category">
+    <img src="pictures ko/travell.jpg" alt="Travel">
+    <strong>Travel</strong>
+  </a>
+
+  <a href="friends.html" class="category">
+    <img src="pictures ko/ueee.gif" alt="Friends">
+    <strong>Friends</strong>
+  </a>
+</div>
+
+<footer>
+  &copy; 2025 Photo Gallery | Miguel Sid A. Agunod
+</footer>
+
+</body>
+</html>
