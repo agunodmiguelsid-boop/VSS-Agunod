@@ -1,88 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
+<head>  
+  <title>Debugging My Dreams: The IT Career I’m Building in the Next Five Years</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Agunod, Miguel Sid A.">
+  <link rel="icon" type="image/png" href="favicon-16x16.png">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <style>
     body {
       background: linear-gradient(to bottom, #eef4f6, #dcecef, #c7e1e8);
-      font-family: "Segoe UI", Tahoma, sans-serif;
       margin: 0;
-      padding: 50px 0 120px;
+      font-family: "Segoe UI", Tahoma, sans-serif;
       color: #1f2d3d;
     }
 
     nav {
+      max-width: 100%;
+      margin: auto;
+      padding: 18px 20px;
       display: flex;
       justify-content: center;
+      gap: 26px;
       flex-wrap: wrap;
-      gap: 18px;
-      margin-bottom: 30px;
-      background-color: #ffffff; 
-      padding: 15px 20px; 
-      border-radius: 10px; 
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1); 
-      font-size: 13.5px;
+      background-color: #fff;
     }
 
     nav a {
       text-decoration: none;
-      color: #000000;
+      font-size: 14px;
       font-weight: 600;
-      padding: 10px 15px;
+      color: #1f2d3d;
+      padding: 6px 12px;
       border-radius: 6px;
-      transition: background-color 0.25s ease, transform 0.15s ease;
+      transition: background-color 0.25s, color 0.25s, transform 0.2s;
     }
 
     nav a:hover {
       background-color: #d0e4f0;
+      color: #1f6fa8;
       transform: translateY(-2px);
     }
 
-    /* CONTENT CARD */
     .content {
-      background-color: rgba(255, 255, 255, 0.85);
       max-width: 900px;
-      margin: auto;
-      padding: 50px 60px;
-      border-radius: 14px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
 
-    h1 {
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 26px;
+    .article-card {
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 14px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+      margin-bottom: 50px;
+      padding: 40px 45px;
+    }
+
+    .article-header {
       text-align: center;
-      margin: -50px -60px 40px;
-      padding: 24px 30px;
+      padding: 28px 30px 24px;
+      margin-bottom: 30px;
       background-color: #f7f5f2;
       border-radius: 14px 14px 0 0;
+    }
+
+    .article-header h1 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 26px;
+      margin: 0 0 6px;
       letter-spacing: 0.5px;
     }
 
-    h2 {
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: 22px;
-      margin: 40px 0 12px;
-      color: #1f2d3d;
+    .article-meta {
+      font-size: 13px;
+      color: #666;
     }
+
+    h2, h3, h5 {
+      font-family: "Playfair Display", Georgia, serif;
+      text-align: center;
+      margin-top: 35px;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    h2 { font-size: 22px; }
+    h3 { font-size: 20px; }
+    h5 { font-size: 18px; }
 
     p {
       font-size: 15.5px;
       line-height: 1.75;
       text-align: justify;
-      margin-bottom: 22px;
       text-indent: 2em;
+      margin-bottom: 22px;
+      max-width: 820px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     ul, ol {
-      margin: 0 0 25px 45px;
-      line-height: 1.7;
+      max-width: 820px;
+      margin: 0 auto 30px;
+      padding-left: 30px;
       font-size: 15.5px;
+      line-height: 1.7;
     }
 
     li {
-      margin-bottom: 10px;
+      margin-bottom: 18px;
     }
 
     hr {
@@ -90,43 +116,38 @@
       height: 1px;
       background-color: #1f2d3d;
       opacity: 0.15;
-      margin: 35px 0;
+      margin: 40px auto;
+      max-width: 700px;
+    }
+
+    .nav-btns {
+      text-align: center; 
+      margin: 40px 0;
     }
 
     .nav-btns a {
-      padding: 12px 26px;
+      padding: 14px 28px;
       background-color: #1f6fa8;
       color: #fff;
       text-decoration: none;
       font-size: 16px;
       font-weight: 600;
       border-radius: 6px;
-      transition: background-color 0.2s, transform 0.1s;
+      margin: 0 10px;
+      transition: background-color 0.25s ease, transform 0.2s ease;
     }
 
     .nav-btns a:hover {
       background-color: #155a87;
-      transform: translateY(-1px);
-    }
-
-    footer {
-      background-color: #f7f5f2;
-      text-align: center;
-      padding: 14px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      font-size: 12.5px;
-      color: #555;
+      transform: translateY(-2px);
     }
 
     @media (max-width: 600px) {
-      .content {
-        padding: 40px 25px;
+      .article-card {
+        padding: 30px 20px;
       }
 
-      h1 {
-        margin: -40px -25px 30px;
+      .article-header h1 {
         font-size: 24px;
       }
 
@@ -144,8 +165,8 @@
 
 <body>
 
-<!-- TASKBAR / NAVIGATION -->
 <nav>
+  <a href="index.html">Home</a>
   <a href="biography.html">Biography</a>
   <a href="gallery.html">Photo Gallery</a>
   <a href="beats.html">My Beats</a>
@@ -156,63 +177,60 @@
 </nav>
 
 <div class="content">
+  <div class="article-card">
+    <div class="article-header">
+      <h1>Debugging My Dreams: The IT Career I’m Building in the Next Five Years</h1>
+      <div class="article-meta">Miguel Sid A. Agunod · February 15, 2026</div>
+    </div>
 
-<h1>Debugging My Dreams: The IT Career I’m Building in the Next Five Years</h1>
+    <h2>Introduction</h2>
+    <p>
+      Hindi ko inakala na ang pagkuha ko ng IT course ay magpapaisip sa akin nang seryoso tungkol sa future ko. Noong una, akala ko ang IT ay tungkol lang sa computers, codes, at pag-aayos ng technical problems. Ngunit habang tumatagal, napagtanto ko na mas malalim pala ang larangang ito.
+    </p>
 
-<h2>Introduction</h2>
-<p>
-Hindi ko inakala na ang pagkuha ko ng IT course ay magpapaisip sa akin nang seryoso tungkol sa future ko. Noong una, akala ko ang IT ay tungkol lang sa computers, codes, at pag-aayos ng technical problems. Ngunit habang tumatagal, napagtanto ko na mas malalim pala ang larangang ito.
-</p>
+    <hr>
 
-<hr>
+    <h2>How My Interest in IT Started</h2>
+    <p>
+      Nagsimula ang interes ko sa IT dahil sa aking mga karanasan sa paaralan at sa araw-araw na paggamit ng teknolohiya. Mas lalo akong nahikayat sa larangang ito dahil sa mga sumusunod:
+    </p>
 
-<h2>How My Interest in IT Started</h2>
-<p>
-Nagsimula ang interes ko sa IT dahil sa aking mga karanasan sa paaralan at sa araw-araw na paggamit ng teknolohiya. Mas lalo akong nahikayat sa larangang ito dahil sa mga sumusunod:
-</p>
+    <ul>
+      <li>Mas madalas na paggamit ng computers sa school projects</li>
+      <li>Pag-unawa kung paano gumagana ang isang program</li>
+      <li>Pag-aayos ng simpleng technical issues nang mag-isa</li>
+    </ul>
 
-<ul>
-  <li>Mas madalas na paggamit ng computers sa school projects</li>
-  <li>Pag-unawa kung paano gumagana ang isang program</li>
-  <li>Pag-aayos ng simpleng technical issues nang mag-isa</li>
-</ul>
+    <p>Dito ko napagtanto na mas interesado ako sa mga prosesong nangyayari sa likod ng screen.</p>
 
-<p>
-Dito ko napagtanto na mas interesado ako sa mga prosesong nangyayari sa likod ng screen.
-</p>
+    <hr>
 
-<hr>
+    <h2>My Goals in the Next Five Years</h2>
+    <p>
+      Sa loob ng susunod na limang taon, nakikita ko ang sarili ko na aktibong nagtatrabaho sa IT industry at patuloy na hinahasa ang aking kakayahan.
+    </p>
 
-<h2>My Goals in the Next Five Years</h2>
-<p>
-Sa loob ng susunod na limang taon, nakikita ko ang sarili ko na aktibong nagtatrabaho sa IT industry at patuloy na hinahasa ang aking kakayahan.
-</p>
+    <ol>
+      <li>Palakasin ang kaalaman sa programming, networking, at system management</li>
+      <li>Magpatuloy sa pag-aaral ng mga bagong teknolohiya</li>
+      <li>Makakuha ng internships o entry-level IT positions</li>
+      <li>Mapataas ang kumpiyansa sa aking technical skills</li>
+    </ol>
 
-<ol>
-  <li>Palakasin ang kaalaman sa programming, networking, at system management</li>
-  <li>Magpatuloy sa pag-aaral ng mga bagong teknolohiya</li>
-  <li>Makakuha ng internships o entry-level IT positions</li>
-  <li>Mapataas ang kumpiyansa sa aking technical skills</li>
-</ol>
+    <hr>
 
-<hr>
+    <h2>Conclusion / Reflection</h2>
+    <p>
+      Sa pagtingin ko sa hinaharap, hindi lamang isang IT job ang aking hangarin kundi ang maging isang responsable at maaasahang IT professional na may malinaw na direksyon sa karera.
+    </p>
 
-<h2>Conclusion / Reflection</h2>
-<p>
-Sa pagtingin ko sa hinaharap, hindi lamang isang IT job ang aking hangarin kundi ang maging isang responsable at maaasahang IT professional na may malinaw na direksyon sa karera.
-</p>
-
-<div class="nav-btns" style="display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap;">
-  <a href="blog1.html" class="prev-btn" style="padding: 12px 26px;">Previous Page</a>
-  <a href="blog3.html" class="next-btn" style="padding: 12px 26px;">Next Page</a>
-  <a href="index.html" class="back-btn" style="padding: 12px 26px;">Back To Home</a>
+    <div class="nav-btns">
+      <a href="blog1.html">Previous Page</a>
+      <a href="blog3.html">Next Page</a>
+      <a href="index.html">Back To Home</a>
+    </div>
+  </div>
 </div>
-
-</div>
-
-<footer>
-  &copy; 2025 Career &amp; Future Goals | Miguel Sid A. Agunod
-</footer>
 
 </body>
 </html>

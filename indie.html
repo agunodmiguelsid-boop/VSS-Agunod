@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Independent Music Gallery</title>
+
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef4f6;
+    color: #333;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+  }
+
+  h1 {
+    text-align: center;
+    color: #000;
+    margin-bottom: 40px;
+    font-size: 36px;
+  }
+
+  .card {
+    display: flex;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    overflow: hidden;
+  }
+
+  .card img {
+    width: 300px;
+    object-fit: cover;
+  }
+
+  .card-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .card-content h2 {
+    color: #000;
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+
+  .card-content p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+
+  audio {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .back-link {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    text-decoration: none;
+    color: #1f6fa8;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .card img {
+      width: 90%;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    audio {
+      width: 100%;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>INDEPENDENT MUSIC</h1>
+
+  <div class="card">
+    <img src="pictures ko/cigar.jpg" alt="Tejano Blue">
+    <div class="card-content">
+      <h2>Tejano Blue - Cigarettes After Sex</h2>
+      <p>Tejano Blue has a dreamy, intimate mood, with soft, echoing vocals and ambient instrumentation that evoke late-night reflection and nostalgia. Its slow tempo and hazy production make it feel like a memory you can sink into, capturing longing and quiet introspection.</p>
+      <audio controls>
+        <source src="music/tejanoblue-cas.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="pictures ko/jiwoo.jpg" alt="Comme des Garcons - Jiwoo">
+    <div class="card-content">
+      <h2>Comme des Garçons - Jiwoo</h2>
+      <p>Comme des Garçons carries an ethereal and smooth indie-pop vibe, blending delicate melodies with emotional, airy vocals for a contemplative mood. The song feels like a delicate balance of vulnerability and confidence, with subtle instrumentation that adds texture and depth.</p>
+      <audio controls>
+        <source src="music/cdg-jiwoo.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="pictures ko/delwatergap.jpg" alt="High Top - Del Water Gap">
+    <div class="card-content">
+      <h2>High Top - Del Water Gap</h2>
+      <p>High Tops is light and playful, with upbeat indie pop-rock rhythms and breezy instrumentation that create a carefree, nostalgic feeling. Its energetic yet mellow vibe makes it feel like walking through warm, sunlit streets, evoking joy, freedom, and youthful memories.</p>
+      <audio controls>
+        <source src="music/hts-delwatergap.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div>
+
+  <a class="back-link" href="beats.html">← Back to Beats</a>
+</div>
+
+</body>
+</html>
